@@ -1,11 +1,12 @@
-package com.HbOnetoManyUni.config;
+package com.Sprint1.config;
 
+import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.*;
+
 public class HibernateUtil {
-	
+
 	private static SessionFactory  sessionFactory ;
-     
+    
 	static {
 		try {
 			sessionFactory = new Configuration().configure().buildSessionFactory();
@@ -18,5 +19,4 @@ public class HibernateUtil {
 	public static SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
-
 }
